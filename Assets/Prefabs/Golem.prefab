@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3627148462231595253}
   - component: {fileID: 4982117386531196416}
   - component: {fileID: 6839421510743602696}
-  - component: {fileID: 8359291780578440795}
-  - component: {fileID: 4653422557377896718}
   - component: {fileID: -7668870110076651566}
+  - component: {fileID: 232275253417440877}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4963793390336620151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.888889, y: 0.011134744, z: 0}
+  m_LocalPosition: {x: 10, y: -3.36, z: 0}
   m_LocalScale: {x: -4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,48 +108,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8359291780578440795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963793390336620151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a003c672ca3694cb5f7e49437cfce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 3
-  camara: {fileID: 0}
-  posicionMinima: {x: 0, y: 0}
---- !u!50 &4653422557377896718
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963793390336620151}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &-7668870110076651566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,3 +153,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &232275253417440877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963793390336620151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96edf13492b55804e9e40524bc9f3610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 0
+  camara: {fileID: 0}
+  posicionMinima: {x: 0, y: 0}
+  posicionInicial: {x: 0, y: 0}

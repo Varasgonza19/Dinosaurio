@@ -21,18 +21,26 @@ public class Movimiento_Enemigo_Terrestre : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * velocidad * Time.deltaTime);
-    }
-    IEnumerator Distancia()
-    {
-        while (true)
+        if (transform.position.x < posicionMinima.x)
         {
-            yield return new WaitForSeconds(Random.Range(5, 10));
-            transform.position = posicionInicial;
-            velocidad += (Time.time / 10);
-            if (velocidad > 15)
-            {
-                velocidad = 15;
-            }
+            StartCoroutine(ReiniciarRecorrido());
         }
+    }
+
+    public IEnumerator ReiniciarRecorrido()
+    {
+        yield return new WaitForSeconds(Random.Range(5, 10));
+        transform.position = posicionInicial;
+        velocidad += (Time.time / 10);
+        if (velocidad > 15)
+        {
+            velocidad = 15;
+        }
+    }
+
+    public void ReiniciarNivel()
+    {
+        velocidad = 3;
+        transform.position = posicionInicial;
     }
 }
