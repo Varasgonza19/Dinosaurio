@@ -42,7 +42,7 @@ public class ControlPersonaje : MonoBehaviour
         animator.SetBool("Parametro1", false);
 
 
-        if (collision.transform.tag == "enemigo")
+        if (collision.transform.tag == "Enemigo")
         {
             gameManager.Perder();
         }

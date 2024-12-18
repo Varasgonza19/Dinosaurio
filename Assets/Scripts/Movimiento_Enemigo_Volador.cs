@@ -12,7 +12,7 @@ public class Movimiento_Enemigo_Volador : MonoBehaviour
     void Start()
     {
         velocidadHorizontal = 3;
-        velocidadVertical = Random.Range(-.5f, .5f);
+        velocidadVertical = Random.Range(-.25f, .25f);
         camara = Camera.main;
         posicionMinima = camara.ViewportToWorldPoint(new Vector2(0, 0));
         posicionInicial = transform.position;
@@ -30,10 +30,10 @@ public class Movimiento_Enemigo_Volador : MonoBehaviour
     }
     public IEnumerator ReiniciarRecorrido()
     {
-        yield return new WaitForSeconds(Random.Range(1f, 4f));
+        yield return new WaitForSeconds(Random.Range(0f, 2f));
         transform.position = posicionInicial;
-        velocidadHorizontal += (Time.time / 10);
-        velocidad += (Time.time / 10);
+        velocidadHorizontal += (Time.time / 50);
+        velocidad += (Time.time / 50);
         if (velocidadHorizontal > 15)
         {
             velocidadHorizontal = 15;

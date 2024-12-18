@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         puntuacionMaxima = PlayerPrefs.GetInt("puntuacionMaxima");
         gameOver.SetActive(false);
         buttom.SetActive(false);
+        puntuacionActual = -1;
+        cronometro = true;
     }
 
     // Update is called once per frame
@@ -27,6 +29,9 @@ public class GameManager : MonoBehaviour
         {
             tiempo += Time.deltaTime;
         }
+
+
+        
     }
     public void Perder()
     {
@@ -62,6 +67,11 @@ public class GameManager : MonoBehaviour
 
     public void ActualizarPuntuacion()
     {
+        puntuacionActual += 1;
         
+        if (puntuacionActual > puntuacionMaxima)
+        {
+            puntuacionMaxima = puntuacionActual;
+        }
     }
 }

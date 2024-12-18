@@ -29,9 +29,9 @@ public class Movimiento_Enemigo_Terrestre : MonoBehaviour
 
     public IEnumerator ReiniciarRecorrido()
     {
-        yield return new WaitForSeconds(Random.Range(5, 10));
+        yield return new WaitForSeconds(Random.Range(0f, 2f));
         transform.position = posicionInicial;
-        velocidad += (Time.time / 10);
+        velocidad += (Time.time / 50);
         if (velocidad > 15)
         {
             velocidad = 15;
